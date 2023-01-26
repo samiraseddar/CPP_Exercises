@@ -5,6 +5,6 @@
 TEST_CASE("Test 02 - "
           "Par defaut, une peluche coute 10 euros.")
 {
-    auto plush = Plush {};
+    auto plush = Plush{};
     REQUIRE(plush.get_cost() == 10);
 }
