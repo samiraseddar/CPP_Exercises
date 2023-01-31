@@ -48,6 +48,10 @@ public:
         return argent + (argent * 0.10);
         ;
     }
+    std::optional<Plush> buy(int price)
+    {
+        return std::optional(Plush{price});
+    }
 
 private:
     std::string name;
