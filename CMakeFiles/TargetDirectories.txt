@@ -1,0 +1,3 @@
+/home/samira/CPP_Exercises/CMakeFiles/rebuild_cache.dir
+/home/samira/CPP_Exercises/CMakeFiles/edit_cache.dir
+/home/samira/CPP_Exercises/CMakeFiles/translator.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/translator.dir/src/translator.cpp.o -o translator 
