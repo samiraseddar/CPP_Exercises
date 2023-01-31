@@ -16,6 +16,11 @@ public:
     {
         return age;
     }
+    friend std::ostream &operator<<(std::ostream &stream, const Kid &kind)
+    {
+        stream << kind.name << " has " << kind.age << " euros.";
+        return stream;
+    }
 
 private:
     std::string name;
