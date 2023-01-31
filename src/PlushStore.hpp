@@ -32,11 +32,7 @@ public:
     }
     float make_plush(const float &a)
     {
-        return
-    }
-    void make_plush(const float &a)
-    {
-        if (argent > 0)
+        if (argent >= a)
         {
             size++;
             argent = argent - a;
@@ -45,6 +41,7 @@ public:
         {
             argent = 0;
         }
+        return argent;
     }
     float get_debt_amount()
     {
