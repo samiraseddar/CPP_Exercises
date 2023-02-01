@@ -22,9 +22,6 @@ public:
         stream << kind.name << " has " << kind.age << " euros.";
         return stream;
     }
-    void buy_plush(const PlushStore &plush_store)
-    {
-    }
 
 private:
     std::string name;
