@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Plush.hpp"
 class PlushStore
 {
 public:
@@ -46,8 +47,7 @@ public:
     float get_debt_amount()
     {
         return argent + (argent * 0.10);
-        ;
-    }
+     }
     std::optional<Plush> buy(int price)
     {
         return std::optional(Plush{price});

@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "PlushStore.hpp"
 class Kid
 {
 
@@ -20,6 +21,9 @@ public:
     {
         stream << kind.name << " has " << kind.age << " euros.";
         return stream;
+    }
+    void buy_plush(const PlushStore &plush_store)
+    {
     }
 
 private:
