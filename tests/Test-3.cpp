@@ -13,4 +13,3 @@ TEST_CASE("3. Getter functions do not modify the instance")
     REQUIRE(card.get_name() == "");
     REQUIRE(card.get_description() == "");
 }
-enum
