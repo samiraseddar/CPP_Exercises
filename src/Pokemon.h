@@ -1,51 +1,16 @@
 #pragma once
-
 #include <string>
-#include <iostream>
 #include <memory>
-// A creature that is cute and can fight other ones.
-/*class Pokemon
-{
-public:
-    Pokemon(std::string_view nom) : nam{nom}, _id{idd++}
-    {
-    }
-    Pokemon(const Pokemon &pokemon) : nam{pokemon.nam}, _id{idd++}
-    {
-    }
-    Pokemon &operator=(const Pokemon &other)
-    {
-        if (this != &other)
-        {
-            nam = other.nam;
-        }
-
-        return *this;
-    }
-    std::string name() const
-    {
-        return nam;
-    }
-    int id() const
-    {
-        return _id;
-    }
-
-private:
-    std::string nam;
-    static inline int idd = 0;
-    int _id;
-};*/
 class Pokemon
 {
 
 public:
-    Pokemon(std::string name) : nam{name}, _idd{idd++} {};
-    Pokemon(const Pokemon &pok) : nam{pok.nam}, _idd{idd++} {};
+    Pokemon(const std::string &name) : _name{name}, _idd{_id++} {};
+    Pokemon(const Pokemon &pok) : _name{pok._name}, _idd{_id++} {};
 
-    std::string name() const
+    const std::string &name() const
     {
-        return nam;
+        return _name;
     }
     int id() const
     {
@@ -55,15 +20,19 @@ public:
     {
         if (this != &other)
         {
-            nam = other.nam;
+            _name = other._name;
         }
 
         return *this;
     }
+    PokemonPtr trainer()
+    {
+        return std::make_unique();
+    }
 
 private:
-    std::string nam;
-    static inline int idd;
+    std::string _name;
+    static inline int _id;
     int _idd;
 };
 using PokemonPtr = std::unique_ptr<Pokemon>;

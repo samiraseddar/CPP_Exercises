@@ -1,25 +1,23 @@
 #pragma once
 #include <memory>
-#include <utility>
 #include "Pokemon.h"
-// A ball where a Pokemon sleeps.
 class Pokeball
 {
 
 public:
     bool empty() const
     {
-        return pokem == nullptr;
+        return pokemonptr == nullptr;
     }
-    void store(PokemonPtr pikachu)
+    void store(std::unique_ptr<Pokemon> pokim)
     {
-        pokem = std::move(pikachu);
+        pokemonptr = std::move(pokim);
     }
     const Pokemon &pokemon() const
     {
-        return *pokem;
+        return *pokemonptr;
     }
 
 private:
-    PokemonPtr pokem;
+    PokemonPtr pokemonptr;
 };

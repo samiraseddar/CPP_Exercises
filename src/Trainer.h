@@ -1,26 +1,28 @@
 #pragma once
-#include "PC.h"
 #include <string>
-// A person that captures Pokemons and makes them fight.
+#include "PC.h"
+#include <array>
+#include "Pokeball.h"
 class Trainer
 {
 public:
-    Trainer(const std::string &name, PC &pc) : _name{name}, _pc{pc} {}
+    Trainer(const std::string &name, PC &pc) : _name{name}, _pc{pc} {};
     const std::string &name() const
     {
         return _name;
     }
-    const std::vector<PC> &pokeballs() const
+    const std::array<Pokeball, 6> &pokeballs() const
     {
-        return pcs;
+
+        return array;
     }
-    void capture(PokemonPtr pok)
+    void capture(std::unique_ptr<Pokemon> pokemon)
     {
-        _pc.transfer(std::move(pok));
+        _pc.transfer(std::move(pokemon));
     }
 
 private:
     std::string _name;
     PC &_pc;
-    std::vector<PC> pcs{6};
+    std::array<Pokeball, 6> array;
 };
