@@ -33,6 +33,39 @@ class Spell : public Card
 public:
     Spell(const std::string &_id, const std::string &_name, SpellType _spell_type) : Card{_id, CardType::Spell}, _spell_type{_spell_type}
     {
+
+        //_symbol = u8"魔";
+        set_name(_name);
+    }
+    SpellType get_spell_type()
+    {
+        return _spell_type;
+    }
+    void set_description(const std::string des)
+    {
+        _description = des;
+    }
+    /*std::string get_trap_type() const
+    {
+        return _symbol;
+    }*/
+    std::string get_symbol() const
+    {
+        return _symbol;
+    }
+
+private:
+    SpellType _spell_type;
+    std::string _name;
+    std::string _description;
+};
+
+/*
+class Spell : public Card
+{
+public:
+    Spell(const std::string &_id, const std::string &_name, SpellType _spell_type) : Card{_id, CardType::Spell}, _spell_type{_spell_type}
+    {
         set_name(_name);
         _symbol = u8"魔";
     }
@@ -51,4 +84,4 @@ public:
 
 private:
     SpellType _spell_type;
-};
+};*/

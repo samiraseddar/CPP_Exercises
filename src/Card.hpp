@@ -7,6 +7,7 @@ enum class CardType
     Trap,
 
 };
+
 std::string to_string(CardType car)
 {
     switch (car)
@@ -22,6 +23,7 @@ std::string to_string(CardType car)
         return " ";
     }
 }
+
 class Card
 {
 public:

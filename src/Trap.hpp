@@ -31,9 +31,10 @@ public:
         set_name(_name);
         _symbol = u8"罠";
     }
-    std::string get_trap_type() const
+    TrapType get_trap_type()
     {
-        return _symbol;
+        // return _symbol;
+        return _type;
     }
     std::string get_symbol() const
     {
